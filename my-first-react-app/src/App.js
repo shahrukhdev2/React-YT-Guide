@@ -2,14 +2,14 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [value, setValue] = useState(0);
+  const [count, setCount] = useState(0);
 
   const increment = () => {
-    setValue((prevValue) => ++prevValue);
+    setCount((prevCount) => ++prevCount);
   };
 
   const decrement = () => {
-    setValue((prevValue) => --prevValue);
+    setCount((prevCount) => --prevCount);
   };
 
   return (
@@ -17,7 +17,7 @@ function App() {
       <button type="button" onClick={decrement}>
         -
       </button>
-      <input type="text" value={value} />
+      <input type="text" value={count} />
       <button type="button" onClick={increment}>
         +
       </button>
